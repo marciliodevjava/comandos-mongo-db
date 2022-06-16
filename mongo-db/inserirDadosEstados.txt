@@ -15,3 +15,8 @@ db.estados.find()
 db.estados.find().pretty()
 db.help
 db.tab+tab
+
+Consultadas
+db.estados.findOne({sigla:"RJ"}).pretty()
+db.estados.find({$or:[{sigla:"RJ"},{sigla:"AC"}]}).pretty()
+db.estados.find({$and:[{sigla:"RJ"},{sigla:"AC"}]}).pretty()

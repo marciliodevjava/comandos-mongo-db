@@ -1,0 +1,6 @@
+db.estados.find({populacao:{$exists: true}}) // Existe: true
+db.estados.find().skip(1).limit(2) // pegar os dados páginados
+db.estados.count() // Quantos instes você vai gerar
+db.estados.find({sigla:"SP"}, {nome:1, sigla: 1})
+db.estados.find({sigla:"SP"}, {nome:1, sigla: 1, _id: 0}) // Tira o atributo _id
+db.estados.find({sigla: "SP"}, {"cidade.nome": 1, _id: 0 }) // Trás somente o atributo nome da chamada
